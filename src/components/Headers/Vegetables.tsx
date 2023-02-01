@@ -2,6 +2,7 @@ import React from 'react';
 
 const scale = 1;
 
+//TODO : move this and Greens.tsx to Main
 export default function Vegetables() {
   return (
     <>

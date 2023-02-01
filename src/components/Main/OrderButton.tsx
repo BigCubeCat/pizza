@@ -15,7 +15,7 @@ export default function OrderButton({ text }: { text: string }) {
         position: "absolute",
         left: 0, right: 0,
         marginLeft: "auto", marginRight: "auto",
-        width: 175, bottom: 80,
+        width: 175, bottom: 40,
       }}
       component={Link}
       to={"/order"}
