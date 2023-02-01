@@ -1,6 +1,6 @@
 import React from 'react';
 
-const scale = 0.8;
+const scale = 1;
 
 export default function Vegetables() {
   return (
