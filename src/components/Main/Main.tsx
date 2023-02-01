@@ -4,7 +4,7 @@ import Header from '../Headers/Header';
 import Logo from '../Headers/Logo';
 import Vegetables from '../Headers/Vegetables';
 import Greens from '../Headers/Greens';
-import Pizza from './Pizza';
+import Pizza from '../Pizza/Pizza';
 
 export default function Main() {
   return <div style={{ color: "#fff" }}>

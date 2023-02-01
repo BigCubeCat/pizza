@@ -1,4 +1,5 @@
 import React from 'react';
+import Ingredients from './Ingredients';
 
 
 export default function Pizza() {
@@ -13,6 +14,7 @@ export default function Pizza() {
           bottom: 0, zIndex: 0,
           maxWidth: 700,
         }} />
+      <Ingredients />
     </>
   )
 }
