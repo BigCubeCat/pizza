@@ -41,7 +41,7 @@ export const {
   setCategory, setBox, addPizza, removePizza, emptyBox
 } = mainSlice.actions;
 
-export const selectBox = (state: RootState) => state.box;
-export const selectCategory = (state: RootState) => state.category;
+export const selectBox = (state: RootState) => state.main.box;
+export const selectCategory = (state: RootState) => state.main.category;
 export default mainSlice.reducer;
 

@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import {
   Box, Typography, Button
 } from "@mui/material";
-import { RU_CATEGORYS, US_CATEGORYS } from '../../types/pizza';
+import { RU_CATEGORYS, US_CATEGORYS, TPizza } from '../../types/pizza';
+import { getAllPizza } from '../../api/pizza';
+import PizzaCard from '../PizzaCard/PizzaCard';
 
 export default function ListPage() {
+  const [pizzaList, setPizzaList] = useState<TPizza[]>([]);
+
+  useEffect(() => {
+    getAllPizza().then(value => setPizzaList(value));
+  }, [])
+
   return (
     <Box sx={{
       backgroundColor: "#fff",
@@ -13,7 +21,7 @@ export default function ListPage() {
       height: "100wh",
       position: "absolute",
       bottom: 0, left: 0, right: 0, top: "15%",
-      padding: 7,
+      padding: 7, overflowY: 'scroll',
     }}>
       <Typography
         variant="h4"
@@ -35,7 +43,10 @@ export default function ListPage() {
           >{RU_CATEGORYS[i]}</Button>
         )}
       </Box>
-      <Box>
+      <Box sx={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap" }}>
+        {pizzaList.map(
+          (item) => <PizzaCard pizza={item} />
+        )}
       </Box>
     </Box>
   )

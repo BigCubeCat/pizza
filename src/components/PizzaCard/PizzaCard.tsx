@@ -3,23 +3,28 @@ import React from 'react';
 import {
   Card, CardContent, Typography, CardMedia
 } from "@mui/material";
+import { TPizza } from '../../types/pizza';
 
-export default function PizzaCard() {
+export default function PizzaCard({ pizza }: { pizza: TPizza }) {
+  console.log(pizza)
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
+    <Card sx={{
+      maxWidth: 300, margin: 5,
+    }}>
+      <img
+        height="200px"
+        width="200px"
+        src={pizza.img}
         alt="green iguana"
       />
       <CardContent>
         <Typography gutterBottom variant="h6" component="div">
-          Lizard
+          {pizza.name}
         </Typography>
-        <Typography>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+        <Typography variant="body2" color="text.secondary">
+          {
+            pizza.ingredients.join(', ')
+          }
         </Typography>
       </CardContent>
     </Card>
