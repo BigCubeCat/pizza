@@ -3,9 +3,12 @@ import {
   Box, Link
 } from '@mui/material';
 
-const HeaderLink = ({ title }: { title: string }) => {
+const HeaderLink = ({ title, link }: {
+  title: string,
+  link: string,
+}) => {
   return <Link
-    href="/"
+    href={link}
     underline="none"
     sx={{
       color: "#fff",
@@ -27,9 +30,9 @@ export default function Header() {
       width: 400,
       marginLeft: "auto", marginRight: "auto",
     }}>
-      <HeaderLink title="Главная" />
-      <HeaderLink title="Выбрать пиццу" />
-      <HeaderLink title="Оформить заказ" />
+      <HeaderLink link="/" title="Главная" />
+      <HeaderLink link="/list" title="Выбрать пиццу" />
+      <HeaderLink link="/order" title="Оформить заказ" />
     </Box>
   )
 }

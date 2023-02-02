@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import './App.css'
 import { Routes, Route } from "react-router-dom";
-
-import useWindowDimensions from './utils/windowDimension';
-import Main from './components/Main/Main';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+import useWindowDimensions from './utils/windowDimension';
+
+import Main from './components/Main/Main';
+import ListPage from './components/List/ListPage';
+
+import Header from './components/Headers/Header';
+import Logo from './components/Headers/Logo';
 
 const theme = createTheme({
   palette: {
@@ -30,8 +34,11 @@ function App() {
           width={width}
           height={height}
         />
+      <Header />
+      <Logo />
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/list" element={<ListPage />} />
           <Route path="/order" element={<div />} />
         </Routes>
       </div>
