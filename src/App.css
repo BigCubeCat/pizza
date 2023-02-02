@@ -5,6 +5,16 @@
   text-align: center;
 }
 
+.BG {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

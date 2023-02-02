@@ -1,0 +1,41 @@
+.container {
+  position: absolute;
+  bottom: 120px;
+  margin-left: auto; margin-right: auto;
+  left: 0; right: 0;
+}
+.block {
+  width: 900px;
+  height: 50px;
+  transform-origin: center;
+  transform: rotate(0deg);
+  position: absolute;
+  left: 0; right: 0;
+  margin-left: auto; margin-right: auto;
+}
+.block:nth-child(1) {
+  transform: rotate(25.714285714285715deg);
+}
+.block:nth-child(2) {
+  transform: rotate(51.42857142857143deg);
+}
+.block:nth-child(3) {
+  transform: rotate(77.14285714285714deg);
+}
+.block:nth-child(4) {
+  transform: rotate(102.85714285714286deg);
+}
+.block:nth-child(5) {
+  transform: rotate(128.57142857142858deg);
+}
+.block:nth-child(6) {
+  transform: rotate(154.28571428571428deg);
+}
+.block:nth-child(7) {
+  transform: rotate(180deg);
+}
+.square {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
