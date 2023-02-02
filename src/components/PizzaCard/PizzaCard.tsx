@@ -62,9 +62,9 @@ export default function PizzaCard({ pizza }: { pizza: TPizza }) {
             color: "#fff",
             fontWeight: "bold"
           }}
-          onClick={() => {}}
+          onClick={() => { }}
         >Добавить</Button>
       </Box>
     </Card>
-  )
+  );
 }
