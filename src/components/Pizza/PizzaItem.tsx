@@ -14,9 +14,6 @@ export default function PizzaItem({ item }: {
         width="80px"
         height="80px"
         src={item.img}
-        sx={{
-          transform: "rotate(180deg)"
-        }}
       />
       <Typography color="#fff" variant="h6" component="div" >
         {item.title}
