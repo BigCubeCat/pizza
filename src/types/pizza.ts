@@ -11,6 +11,13 @@ type TClassifications = {
 }
 
 export type TCategory = "recomend" | "no-meat" | "sweet" | "discount" | "drinks"
+export const US_CATEGORYS: TCategory[] = [
+  "recomend", "no-meat", "sweet", "discount", "drinks"
+]
+export const RU_CATEGORYS: string[] = [
+  "Рекомендуем", "Без мяса",
+  "Сладкая", "Акции", "Напитки"
+]
 
 export type TPizza = {
   id: number;

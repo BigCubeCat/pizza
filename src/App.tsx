@@ -13,10 +13,10 @@ import Logo from './components/Headers/Logo';
 
 const theme = createTheme({
   palette: {
-    secondary: {
+    primary: {
       main: '#f6b716',
     },
-    primary: {
+    secondary: {
       main: '#40a02b',
     },
   },
@@ -34,8 +34,8 @@ function App() {
           width={width}
           height={height}
         />
-      <Header />
-      <Logo />
+        <Header />
+        <Logo />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/list" element={<ListPage />} />
