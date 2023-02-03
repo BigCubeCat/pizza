@@ -7,6 +7,7 @@ import useWindowDimensions from './utils/windowDimension';
 
 import Main from './components/Main/Main';
 import ListPage from './components/List/ListPage';
+import Order from './components/Order/Order';
 
 import Header from './components/Headers/Header';
 import Logo from './components/Headers/Logo';
@@ -39,7 +40,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/list" element={<ListPage />} />
-          <Route path="/order" element={<div />} />
+          <Route path="/order" element={<Order />} />
         </Routes>
       </div>
     </ThemeProvider>

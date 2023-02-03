@@ -10,6 +10,7 @@ import PizzaCard from '../PizzaCard/PizzaCard';
 export default function ListPage() {
   const [pizzaList, setPizzaList] = useState<TPizza[]>([]);
 
+  console.log(pizzaList);
   useEffect(() => {
     getAllPizza().then(value => setPizzaList(value));
   }, [])
